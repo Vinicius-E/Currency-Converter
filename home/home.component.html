@@ -1,0 +1,114 @@
+<!--
+    <div class="row center">
+    <label class="lbSelecione"> Selecione a Moeda a ser Convertida </label>
+    <label class="lbValor"> Digite o Valor da Moeda Selecionada </label>
+    <select [(ngModel)]="moeda1" class="form-select" aria-label="Default select example">
+        <option disabled="true"> Selecione a moeda que desejas converter </option>
+        <option *ngFor="let item of lista2" [value]="item.high">{{item.name}} </option>
+    </select>
+    <input [(ngModel)]="valorConverter" type="text" id="valorConverter" name="valor">
+    <button (click)="fazerConversao()" class="btn btn-dark btn-convert"> Converter </button>
+    <div class="result">
+        <b>Resultado:</b>
+        <p> R$:{{resultadoConvercao}}</p>
+    </div>
+    <h1 class="h1Title">
+        Currency converter
+    </h1>
+</div>
+-->
+<div class="row">
+    <div class="col-4">
+        <ul class="list01">
+            <li>
+                <label for="exampleDataList" class="form-label lbl01">Select the Current to Convert into BRL</label>
+                <input [(ngModel)]="currency" class="form-control dtOption" list="datalistOptions" id="exampleDataList"
+                    placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="m" disabled="true"> Select the Current to Convert in BRL </option>
+                    <option *ngFor="let item of lista2" [value]="item.high">{{item.name}} </option>
+                </datalist>
+            </li>
+        </ul>
+    </div>
+    <div class="col-4 middle">
+        <ul class="list02">
+            <li>
+                <label for="exampleDataList" class="form-label lbl02">Digit a Value in the Chosen Currency</label>
+                <input [(ngModel)]="value" type="text" id="value" name="value" placeholder="Value...">
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <ul class="list03">
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="convert">
+                                <button (click)="fazerConversao()" class="btn btn-dark btn-convert"> Convert </button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="result">
+                                <b>Conversion</b>
+                                <p id="pRes"> R$:{{resultadoConvercao}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row row02">
+    <div class="col-4">
+        <ul class="list01">
+            <li>
+                <label for="exampleDataList" class="form-label lbl01">Select the Current to Convert into BRL</label>
+                <input [(ngModel)]="currency" class="form-control dtOption" list="datalistOptions" id="exampleDataList"
+                    placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="m" disabled="true"> Select the Current to Convert in BRL </option>
+                    <option *ngFor="let item of lista2" [value]="item.high">{{item.name}} </option>
+                </datalist>
+            </li>
+        </ul>
+    </div>
+    <div class="col-4 middle">
+        <ul class="list02">
+            <li>
+                <label for="exampleDataList" class="form-label lbl02">Digit a Value in the Chosen Currency</label>
+                <input [(ngModel)]="value" type="text" id="value" name="value"  placeholder="Value...">
+
+            </li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <ul class="list03">
+            <li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="convert">
+                                <button (click)="fazerConversao()" class="btn btn-dark btn-convert"> Convert </button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="result">
+                                <b>Conversion</b>
+                                <p id="pRes"> R$:{{resultadoConvercao}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <h1> Currency Converter </h1>
+</footer>
